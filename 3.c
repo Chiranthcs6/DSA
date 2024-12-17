@@ -75,24 +75,20 @@ void display(){
     }
 }
 void palindrome(){
-    int flag=0,i;
-    printf("\nStack contents are:\n");
-    for(i=top;i>0;i--){
-        printf("|%d|\n",s[i]);
+    int flag=1,i;
+    if(top==-1){
+        printf("Stack empty\n");
+        return;
     }
-    printf("\n Reverse stack contents area: \n");
-    for(i=top;i<=0;i++){
-        printf("|%d|\n",s[i]);
+    for(i=0;i<=top/2;i++){
+    if(s[i]!=s[top-i]){
+        flag=0;
+        break;
+    }}2
+    if(flag==1){
+        printf("It's palindrome ");
     }
-    for(i=0;i=top/2;i++){
-        if(s[i]=s[top-1]){
-            flag=0;
-            break;
-        }}
-        if(flag==1){
-            printf("It's palindrome \n");
-        }
-        else{
-            printf("It's not palindrome \n");
-        }
+    else{
+        printf("It's not palindrome");
     }
+}
