@@ -8,7 +8,7 @@ struct Day{
 void create(struct Day *calendar){
     calendar->dayName=(char*)malloc(sizeof(char)*20);
     calendar->activity=(char*)malloc(sizeof(char)*100);
-    printf("Enter the day Name :");
+    printf("Enter the day Name :"); 
     scanf("%s",calendar->dayName);
     printf("Enter the activity of the day:\t");
     scanf("%s",calendar->activity);

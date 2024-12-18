@@ -84,7 +84,7 @@ void palindrome(){
     if(s[i]!=s[top-i]){
         flag=0;
         break;
-    }}2
+    }}
     if(flag==1){
         printf("It's palindrome ");
     }
