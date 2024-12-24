@@ -14,7 +14,7 @@ typedef struct node* NODE;
 NODE first = NULL;
 int count = 0;
 
-// Create a new node
+
 NODE create() {
     NODE enode;
     enode = (NODE)malloc(sizeof(struct node));
@@ -30,7 +30,7 @@ NODE create() {
     return enode;
 }
 
-// Insert at the front
+
 NODE insertfront() {
     NODE temp;
     temp = create();
@@ -42,7 +42,7 @@ NODE insertfront() {
     return temp;
 }
 
-// Display the list
+
 void display() {
     NODE cur;
     int nodeno = 1;
@@ -51,7 +51,7 @@ void display() {
         return;
     }
     printf("\nEmployee Details:\n");
-    cur = first; // Initialize cur to the first node
+    cur = first; 
     while (cur != NULL) {
         printf("\n|%d| SSN: %s | Name: %s | Dept: %s | Designation: %s | Salary: %d | Phone: %ld", 
                nodeno, cur->ssn, cur->name, cur->dept, cur->desg, cur->sal, cur->phno);
@@ -61,7 +61,7 @@ void display() {
     printf("\nNumber of nodes: %d\n", count);
 }
 
-// Delete from the front
+
 NODE deletefront() {
     NODE temp;
     if (first == NULL) {
@@ -83,7 +83,7 @@ NODE deletefront() {
     return first;
 }
 
-// Insert at the end
+
 NODE insertend() {
     NODE temp, cur;
     temp = create();
@@ -99,7 +99,7 @@ NODE insertend() {
     return first;
 }
 
-// Delete from the end
+
 NODE deleteend() {
     NODE prev, cur;
     if (first == NULL) {
@@ -124,7 +124,7 @@ NODE deleteend() {
     return first;
 }
 
-// Main function
+
 void main() {
     int ch, i, n;
     while (1) {
@@ -138,13 +138,13 @@ void main() {
         printf("7. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &ch);
-        getchar(); // Clear newline from the buffer
+        getchar(); 
 
         switch (ch) {
             case 1:
                 printf("\nEnter the number of employees: ");
                 scanf("%d", &n);
-                getchar(); // Clear newline
+                getchar(); 
                 for (i = 0; i < n; i++) {
                     printf("\nAdding employee %d of %d:\n", i + 1, n);
                     first = insertend();
