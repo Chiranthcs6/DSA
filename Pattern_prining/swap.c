@@ -12,4 +12,4 @@ int main(){
   printf("A: %d\n",a);
   printf("B: %d\n",b);
   return 0;
-}
+} 
